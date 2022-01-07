@@ -13,7 +13,7 @@
 
 body {
   display: grid;
-  grid-template-rows: 10vh 80vh 100vh 40vh;
+  grid-template-rows: 10vh 80vh 100vh 35vh;
   grid-template-columns: repeat(8, 1fr);
 }
 
@@ -162,6 +162,91 @@ body {
 
 .team {
   grid-row: 3 / 4;
+  grid-column: 1 / -1;
+}
+
+.cards {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 2rem;
+
+  justify-items: center;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.card {
+  height: 25rem;
+  width: 18rem;
+  border-radius: 1.5rem;
+  border: 1px solid #13244E;
+  transition: all .3s;
+
+  display: grid;
+}
+.card:hover {
+  border: none;
+  background-color: #13244E;
+  transform: scale(1.02);
+}
+
+.card-img {
+  justify-self: center;
+  align-self: center;
+}
+
+.portrait {
+  object-fit: cover;
+  height: 12.5rem;
+  width: 12.5rem;
+  border: 2px solid #8892A6;
+  border-radius: 50%;
+}
+
+.name {
+  color: #8892A6;
+  font-size: 1.2rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+
+  padding-left: 1rem;
+}
+.card:hover .name {
+  color: #A1FCFD;
+}
+
+.intro {
+  color: #8892A6;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  padding: .75rem;
+}
+
+#card-1 {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+#card-2 {
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+}
+
+#card-3 {
+  grid-row: 1 / 2;
+  grid-column: 4 / 5;
+}
+
+#card-4 {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+
+#card-5 {
+  grid-row: 2 / 3;
+  grid-column: 4 / 5;
 }
 
 .footer {
